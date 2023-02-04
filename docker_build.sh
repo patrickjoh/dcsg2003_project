@@ -1,4 +1,7 @@
 #!/bin/bash
+nano /etc/docker/daemon.json
+{ "insecure-registries" : ["192.168.128.23:5000"] }
+service docker restart
 mkdir static_webserver
 git clone https://github.com/hioa-cs/bookface.git
 cd bookface
