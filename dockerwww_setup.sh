@@ -12,9 +12,9 @@ cd /home/ubuntu/
 git clone https://github.com/patrickjoh/dcsg2003_project.git
 git clone https://github.com/hioa-cs/bookface.git
 cd bookface
-cp -rf code/ ../static_webserver/code
+cp -rf code/ ../dcsg2003_project/static_webserver/code
 mv /home/ubuntu/Dockerfile /home/ubuntu/static_webserver/Dockerfile
-cd ../static_webserver
+cd ../dcsg2003_project/static_webserver
 git 
 dockerd &
 wait
@@ -23,4 +23,3 @@ wait
 docker run -d -P -p 32775:80 --name  web1 --restart unless-stopped bfsite:v1
 wait
 docker run -d -P -p 32776:80 --name  web2 --restart unless-stopped bfsite:v1
-
